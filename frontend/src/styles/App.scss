@@ -1,0 +1,302 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  background-color: #645045;
+  font-family: 'Do Hyeon', sans-serif;
+  color: beige;
+
+  border-bottom: 1px solid black;
+
+  width: 100%;
+
+  > a {
+    margin-right: 50px;
+    margin-left: 30px;
+    font-size: 32px;
+    color: inherit;
+    text-decoration: none;
+    text-shadow: 2px 2px black;
+  }
+}
+
+.game-container {
+  flex: 1;
+  background-color: #d9d8da;
+
+  font-family: 'Walter Turncoat', cursive;
+  font-style: none;
+}
+
+.modal {
+  z-index: 1;
+
+  display: inline-block;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 800px;
+  height: 200px;
+  margin: auto;
+  background-color: whitesmoke;
+  box-shadow: 6px 6px rgb(187, 185, 185);
+
+  .close-modal {
+    float: left;
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+
+  .close-modal:hover,
+  .close-modal:focus {
+    color: black;
+    text-decoration: none;
+    font-size: 32px;
+    transform: rotate(-10deg);
+    cursor: pointer;
+  }
+
+  .modal-body {
+    font-family: 'PT Sans Caption', sans-serif;
+
+    margin: auto;
+    width: 60%;
+    text-align: center;
+    margin-top: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .modal-header {
+    color: black;
+    text-shadow: 1px 1px grey;
+  }
+
+  .modal-content {
+    color: grey;
+  }
+}
+
+.btn-ok {
+  border-radius: 0 0 5px 5px;
+  background: green;
+  color: #fff;
+  box-shadow: 0 6px rgb(1, 102, 1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  height: 40px;
+  margin-top: 25px;
+}
+
+.row {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: inherit;
+}
+
+.waiting-screen {
+  padding: 100px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+
+  .race-settings {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 1px solid black;
+  }
+  .race-logistics {
+    margin-left: 15px;
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+
+    .active-players {
+      flex: 2;
+      border: 1px solid black;
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      flex-wrap: wrap;
+    }
+
+    .start-menu {
+      margin-top: 15px;
+      flex: 1.5;
+      border: 1px solid black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      > button {
+        width: 40%;
+      }
+
+      > input {
+        font-family: 'Walter Turncoat', sans-serif;
+        font-size: 14px;
+        color: rgb(173, 166, 166);
+        width: 80%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.player-profile {
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  height: 50%;
+  border-radius: 10%;
+
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+
+  .leader-decorator {
+    width: 32px;
+    height: 32px;
+  }
+
+  .player-portrait {
+    width: 64px;
+    height: 64px;
+
+    border-radius: 10%;
+    border: 1px solid black;
+  }
+}
+
+.main-screen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .welcome-text {
+    display: block;
+    margin: 20px 0px 0px 50px;
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      display: inline;
+    }
+
+    h1 {
+      margin-right: 60px;
+    }
+  }
+
+  .row {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    div {
+      flex: 1;
+      border: 2px solid black;
+      margin-bottom: 50px;
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+
+    .menu-controls {
+      padding-top: 35px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      button {
+        border-radius: 0 0 5px 5px;
+        background: #cb4e4e;
+        color: #fff;
+        box-shadow: 0 6px #ab3c3c;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 700;
+        border: none;
+        cursor: pointer;
+        padding: 25px 80px;
+        display: inline-block;
+        margin: 15px 30px;
+        width: 90%;
+      }
+    }
+    .ads {
+      flex: 2;
+      text-align: center;
+      h1 {
+        margin-top: 25%;
+      }
+    }
+  }
+}
+
+.game-screen {
+  width: 100%;
+  height: 100%;
+
+  justify-content: center;
+  align-items: center;
+
+  #words-canvas {
+    width: 1024px;
+    height: 80px;
+  }
+
+  #game-canvas {
+    width: 1024px;
+    height: 512px;
+  }
+}
